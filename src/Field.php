@@ -1,6 +1,6 @@
 <?php
 
-namespace MyVendor\SewidanField;
+namespace SewidanField;
 
 use Carbon\Carbon;
 use Form;
@@ -24,9 +24,9 @@ class Field{
     /**
      * @return string
      */
-    public static function langNavTabs()
+    public function langNavTabs()
     {
-            return view('sewidanfield::dashboard.fields.lang-nav-tabs')->render();
+            return view('fields::fields.lang-nav-tabs')->render();
     }
 
     /**
@@ -36,9 +36,9 @@ class Field{
      * @param array $options
      * @return string
      */
-    public static function text($name, $label, $value = null,$options = [])
+    public function text($name, $label, $value = null,$options = [])
     {
-        return view('sewidanfield::dashboard.fields.text',compact('name','label','value','options'))->render();
+        return view('fields::fields.text',compact('name','label','value','options'))->render();
     }
 
     /**
@@ -47,9 +47,9 @@ class Field{
      * @param null $value
      * @return string
      */
-    public static function dateTime($name, $label, $value = null)
+    public function dateTime($name, $label, $value = null)
     {
-        return view('sewidanfield::dashboard.fields.date-time',compact('name','label','value'))->render();
+        return view('fields::fields.date-time',compact('name','label','value'))->render();
     }
 
     /**
@@ -58,9 +58,9 @@ class Field{
      * @param null $value
      * @return string
      */
-    public static function time($name, $label, $value = null)
+    public function time($name, $label, $value = null)
     {
-        return view('sewidanfield::dashboard.fields.time',compact('name','label','value'))->render();
+        return view('fields::fields.time',compact('name','label','value'))->render();
     }
 
     /**
@@ -69,11 +69,11 @@ class Field{
      * @param $array
      * @return string
      */
-    public static function number($name, $label, $value= null , $array = [])
+    public function number($name, $label, $value= null , $array = [])
     {
         $step = inArray('step' , $array , '0.01');
 
-        return view('sewidanfield::dashboard.fields.number',compact('name','label','value','step'))->render();
+        return view('fields::fields.number',compact('name','label','value','step'))->render();
     }
 
     /**
@@ -82,12 +82,12 @@ class Field{
      * @param $type
      * @return string
      */
-    public static function ajaxBtn($name, $array = [] , $type = 'submit')
+    public function ajaxBtn($name, $array = [] , $type = 'submit')
     {
         $class = inArray('class' , $array , 'btn btn-primary');
         $id = inArray('id' , $array , 'ajax-button');
 
-        return view('sewidanfield::dashboard.fields.ajax-btn',compact('name','class','type','id'))->render();
+        return view('fields::fields.ajax-btn',compact('name','class','type','id'))->render();
     }
 
     /**
@@ -96,9 +96,9 @@ class Field{
      * @param null $value
      * @return string
      */
-    public static function email($name, $label,$value = null)
+    public function email($name, $label,$value = null)
     {
-        return view('sewidanfield::dashboard.fields.email',compact('name','label','value'))->render();
+        return view('fields::fields.email',compact('name','label','value'))->render();
     }
 
     /**
@@ -106,9 +106,9 @@ class Field{
      * @param $label
      * @return string
      */
-    public static function password($name, $label)
+    public function password($name, $label)
     {
-        return view('sewidanfield::dashboard.fields.password',compact('name','label'))->render();
+        return view('fields::fields.password',compact('name','label'))->render();
     }
 
     /**
@@ -120,20 +120,22 @@ class Field{
      * @param $value
      * @return string
      */
-    public static function datePicker($name, $label, $value = null ,$min = null , $max = null , $plugin = 'datepicker')
+    public function datePicker($name, $label, $value = null ,$min = null , $max = null , $plugin = 'datepicker')
     {
-        return view('sewidanfield::dashboard.fields.datepicker',compact('name','label','value','plugin','max','min'))->render();
+        return view('fields::fields.datepicker',compact('name','label','value','plugin','max','min'))->render();
     }
 
     /**
      * @param $name
      * @param $label
-     * @param $plugin
+     * @param null $value
+     * @param null $max
+     * @param null $min
      * @return string
      */
-    public static function date($name, $label, $value = null , $max = null , $min = null)
+    public function date($name, $label, $value = null , $max = null , $min = null)
     {
-        return view('sewidanfield::dashboard.fields.date',compact('name','label','value','max','min'))->render();
+        return view('fields::fields.date',compact('name','label','value','max','min'))->render();
     }
 
     /**
@@ -145,9 +147,9 @@ class Field{
      * @param null $selected
      * @return string
      */
-    public static function select($name, $label, $options, $selected = null , $plugin = 'select2', $placeholder = 'اختر قيمة')
+    public function select($name, $label, $options, $selected = null , $plugin = 'select2', $placeholder = 'اختر قيمة')
     {
-        return view('sewidanfield::dashboard.fields.select',compact('name','label', 'options' ,'selected','plugin','placeholder'))->render();
+        return view('fields::fields.select',compact('name','label', 'options' ,'selected','plugin','placeholder'))->render();
     }
     
     
@@ -160,9 +162,9 @@ class Field{
      * @param null $selected
      * @return string
      */
-    public static function multiFileUpload($name , $label , $plugin = "file_upload_preview")
+    public function multiFileUpload($name , $label , $plugin = "file_upload_preview")
     {
-        return view('sewidanfield::dashboard.fields.multiFile-upload',compact('name','label','plugin'))->render();
+        return view('fields::fields.multiFile-upload',compact('name','label','plugin'))->render();
     }
 
     /**
@@ -172,9 +174,9 @@ class Field{
      * @param $options
      * @return string+
      */
-    public static function textarea($name, $label , $value = null , $options = [])
+    public function textarea($name, $label , $value = null , $options = [])
     {
-        return view('sewidanfield::dashboard.fields.textarea',compact('name','label','value','options'))->render();
+        return view('fields::fields.textarea',compact('name','label','value','options'))->render();
     }
 
     /**
@@ -186,9 +188,9 @@ class Field{
      * @param string $plugin
      * @return string
      */
-    public static function editor($name, $label , $value = null , $plugin = 'summernote')
+    public function editor($name, $label , $value = null , $plugin = 'summernote')
     {
-        return view('sewidanfield::dashboard.fields.editor',compact('name','label','value','plugin'))->render();
+        return view('fields::fields.editor',compact('name','label','value','plugin'))->render();
     }
 
     /**
@@ -197,14 +199,14 @@ class Field{
      * @param array $options
      * @return string
      */
-    public static function fileWithPreview($name, $label , $options = [])
+    public function fileWithPreview($name, $label , $options = [])
     {
-        return view('sewidanfield::dashboard.fields.file',compact('name','label' ,'options'))->render();
+        return view('fields::fields.file',compact('name','label' ,'options'))->render();
     }
 
-    public static function checkBox($name, $label ,$options = [])
+    public function checkBox($name, $label ,$options = [])
     {
-        return view('sewidanfield::dashboard.fields.check-box',compact('name','label','options'))->render();
+        return view('fields::fields.check-box',compact('name','label','options'))->render();
     }
 
     /**
@@ -214,8 +216,8 @@ class Field{
      * @param null $checked
      * @return string
      */
-    public static function radio($name, $label ,$options , $checked = null)
+    public function radio($name, $label ,$options , $checked = null)
     {
-        return view('sewidanfield::dashboard.fields.radio',compact('name','label','options','checked'))->render();
+        return view('fields::fields.radio',compact('name','label','options','checked'))->render();
     }
 }

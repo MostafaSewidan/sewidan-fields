@@ -3,7 +3,7 @@ if (! function_exists('field')) {
 
     function field()
     {
-        $field = new MyVendor\SewidanField\Field();
+        $field = new SewidanField\Field();
         return $field;
     }
 

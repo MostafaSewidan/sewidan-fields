@@ -42,7 +42,7 @@ class JsonResource implements ArrayAccess, JsonSerializable, Responsable, UrlRou
     /**
      * The "data" wrapper that should be applied.
      *
-     * @var string|null
+     * @var string
      */
     public static $wrap = 'data';
 
@@ -69,7 +69,7 @@ class JsonResource implements ArrayAccess, JsonSerializable, Responsable, UrlRou
     }
 
     /**
-     * Create a new anonymous resource collection.
+     * Create new anonymous resource collection.
      *
      * @param  mixed  $resource
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection

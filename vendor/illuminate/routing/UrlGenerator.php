@@ -239,7 +239,9 @@ class UrlGenerator implements UrlGeneratorContract
         // Once we get the root URL, we will check to see if it contains an index.php
         // file in the paths. If it does, we will remove it since it is not needed
         // for asset paths, but only for routes to endpoints in the application.
-        $root = $this->assetRoot ?: $this->formatRoot($this->formatScheme($secure));
+        $root = $this->assetRoot
+                    ? $this->assetRoot
+                    : $this->formatRoot($this->formatScheme($secure));
 
         return $this->removeIndex($root).'/'.trim($path, '/');
     }
@@ -367,17 +369,6 @@ class UrlGenerator implements UrlGeneratorContract
     }
 
     /**
-     * Determine if the given request has a valid signature for a relative URL.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return bool
-     */
-    public function hasValidRelativeSignature(Request $request)
-    {
-        return $this->hasValidSignature($request, false);
-    }
-
-    /**
      * Determine if the signature from the given request matches the URL.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -388,9 +379,11 @@ class UrlGenerator implements UrlGeneratorContract
     {
         $url = $absolute ? $request->url() : '/'.$request->path();
 
-        $queryString = ltrim(preg_replace('/(^|&)signature=[^&]+/', '', $request->server->get('QUERY_STRING')), '&');
+        $original = rtrim($url.'?'.Arr::query(
+            Arr::except($request->query(), 'signature')
+        ), '?');
 
-        $signature = hash_hmac('sha256', rtrim($url.'?'.$queryString, '?'), call_user_func($this->keyResolver));
+        $signature = hash_hmac('sha256', $original, call_user_func($this->keyResolver));
 
         return hash_equals($signature, (string) $request->query('signature', ''));
     }

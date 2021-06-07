@@ -36,8 +36,7 @@ trait ReflectsClosures
      * @param  \Closure  $closure
      * @return string
      *
-     * @throws \ReflectionException
-     * @throws \RuntimeException
+     * @throws \ReflectionException|\RuntimeException
      */
     protected function firstClosureParameterType(Closure $closure)
     {

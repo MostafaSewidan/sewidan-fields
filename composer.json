@@ -8,7 +8,6 @@
         }
     ],
     "require": {
-        "laravelcollective/html": "dev-master"
     },
     "extra": {
         "laravel": {

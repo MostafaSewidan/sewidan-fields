@@ -27,5 +27,5 @@ make field
      * @param array $options
      * @return string
      */
-    field()->text('name','label','value',[])
+    field()->text('name','label','value',[]);
 ```

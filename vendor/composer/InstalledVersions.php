@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '6c4de0d851c487e25ae4a44d9c8b4d486b7f7b17',
+    'reference' => '54c2e7fd782d5bd4a536a773893d75fa39bbf051',
     'name' => 'mostafasewidan/sewidan-field',
   ),
   'versions' => 
@@ -46,105 +46,131 @@ private static $installed = array (
       ),
       'reference' => '9cf661f4eb38f7c881cac67c75ea9b00bf97b210',
     ),
-    'illuminate/container' => 
+    'illuminate/bus' => 
     array (
-      'pretty_version' => 'v7.30.4',
-      'version' => '7.30.4.0',
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cf94ed8fbaeb26906bb42b24377dbb061b97a096',
+      'reference' => '2156797125702623af47983867c05cc965490c19',
+    ),
+    'illuminate/collections' => 
+    array (
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'deccb956d38710f3f8baf36dd876c3fa1585ec22',
+    ),
+    'illuminate/container' => 
+    array (
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '07342efca88cf9fff4f2fa0e3c378ea6ee86e5e2',
     ),
     'illuminate/contracts' => 
     array (
-      'pretty_version' => 'v7.30.4',
-      'version' => '7.30.4.0',
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7d964384f0283bd7525ae7b5baa7ad32e5503b8e',
+      'reference' => '199fcedc161ba4a0b83feaddc4629f395dbf1641',
     ),
     'illuminate/events' => 
     array (
-      'pretty_version' => 'v7.30.4',
-      'version' => '7.30.4.0',
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6f64db49dbfd490c6e30c983964543a054882faf',
+      'reference' => 'bd2941d4d55f5d357b203dc2ed81ac5c138593dc',
     ),
     'illuminate/filesystem' => 
     array (
-      'pretty_version' => 'v7.30.4',
-      'version' => '7.30.4.0',
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2013f94a3a7dff008be54884774548e3c222c3e8',
+      'reference' => '7c7372874615475f46d484a2190f90e8effcd8b5',
     ),
     'illuminate/http' => 
     array (
-      'pretty_version' => 'v7.30.4',
-      'version' => '7.30.4.0',
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '39d6e9eca58b575016be5d85cc1f223f632c0e95',
+      'reference' => '0ddfca033e5af9c722f747da4984d62125c5f987',
+    ),
+    'illuminate/macroable' => 
+    array (
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '300aa13c086f25116b5f3cde3ca54ff5c822fb05',
     ),
     'illuminate/pipeline' => 
     array (
-      'pretty_version' => 'v7.30.4',
-      'version' => '7.30.4.0',
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '68434133b675a9914868fb2d8f665ec2157d9faa',
+      'reference' => '23aeff5b26ae4aee3f370835c76bd0f4e93f71d2',
     ),
     'illuminate/routing' => 
     array (
-      'pretty_version' => 'v7.30.4',
-      'version' => '7.30.4.0',
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b5ab5ddc2d914bbfc7907e448c5b56eff8383881',
+      'reference' => '533a791bb3f5ae551b61b2701251db2ebe2d068f',
     ),
     'illuminate/session' => 
     array (
-      'pretty_version' => 'v7.30.4',
-      'version' => '7.30.4.0',
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b18bc348f4af2afae78e72ea332a4390c5c01a72',
+      'reference' => '40b9a38558b7b232fe68a75c18fa7959a25dc9e5',
     ),
     'illuminate/support' => 
     array (
-      'pretty_version' => 'v7.30.4',
-      'version' => '7.30.4.0',
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1c95b8f842308ff15a56d29d897d3bda29001f1c',
+      'reference' => '3832c4a0ba0f0734de8689500164122f5f51c8ab',
     ),
     'illuminate/view' => 
     array (
-      'pretty_version' => 'v7.30.4',
-      'version' => '7.30.4.0',
+      'pretty_version' => 'v8.45.1',
+      'version' => '8.45.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5c2279062da803f36093108d09f4db1d54b302d5',
+      'reference' => '7d06ca72f4ba44c7338b0f14b5de510e500ea64e',
     ),
     'laravelcollective/html' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'v6.2.1',
+      'version' => '6.2.1.0',
       'aliases' => 
       array (
-        0 => '6.0.x-dev',
       ),
-      'reference' => '64f2268bf41bf02b3a9dd3c30f102e934d721664',
+      'reference' => 'ae15b9c4bf918ec3a78f092b8555551dd693fde3',
     ),
     'mostafasewidan/sewidan-field' => 
     array (
@@ -153,7 +179,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '6c4de0d851c487e25ae4a44d9c8b4d486b7f7b17',
+      'reference' => '54c2e7fd782d5bd4a536a773893d75fa39bbf051',
     ),
     'nesbot/carbon' => 
     array (

@@ -8,6 +8,8 @@
         }
     ],
     "require": {
+        "laravelcollective/html": "*",
+        "nesbot/carbon": "*"
     },
     "extra": {
         "laravel": {

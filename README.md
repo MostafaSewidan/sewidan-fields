@@ -20,5 +20,12 @@ php artisan vendor:publish --provider="SewidanField\SewidanFieldServiceProvider"
 
 make field 
 ``` php
-    field()->text('name','label','options')
+    /**
+     * @param $name
+     * @param $label
+     * @param null $value
+     * @param array $options
+     * @return string
+     */
+    field()->text('name','label','value',[])
 ```

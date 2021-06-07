@@ -8,8 +8,7 @@
         }
     ],
     "require": {
-        "laravelcollective/html": "^6.2",
-        "nesbot/carbon": "^2.48"
+        "laravelcollective/html": "^6.2"
     },
     "minimum-stability": "stable",
     "autoload": {

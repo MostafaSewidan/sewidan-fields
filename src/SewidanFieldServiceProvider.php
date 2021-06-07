@@ -6,14 +6,14 @@ class SewidanFieldServiceProvider extends ServiceProvider {
     public function boot() {
         $this->loadViewsFrom(__DIR__.'/resources/views', 'fields');
         $this->publishes([
-            __DIR__.'/../config/filed.php' => config_path('filed.php'),
+            __DIR__.'/../config/field.php' => config_path('field.php'),
         ]);
     }
 
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/filed.php', 'filed'
+            __DIR__.'/../config/field.php', 'field'
         );
     }
 }

@@ -1,0 +1,22 @@
+{
+    "name": "mostafasewidan/sewidan-field",
+    "description": "this package helps to make form fields Easier to use",
+    "authors": [
+        {
+            "name": "MostafaSewidan",
+            "email": "sewidanmostafa@gmail.com"
+        }
+    ],
+    "require": {
+        "laravelcollective/html": "^6.2",
+        "nesbot/carbon": "^2.48"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyVendor\\SewidanField\\": "src/"
+        },
+        "files": [
+            "src/fieldLoader.php"
+        ]
+    }
+}

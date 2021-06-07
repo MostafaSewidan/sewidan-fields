@@ -11,6 +11,7 @@
         "laravelcollective/html": "^6.2",
         "nesbot/carbon": "^2.48"
     },
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "MyVendor\\SewidanField\\": "src/"

@@ -1,9 +1,9 @@
 <?php
 return [
 
-    'default' => env('FIELD_DEFAULT_CONTENT','default'),
+    'default_theme' => env('FIELD_DEFAULT_THEME','default'),
 
-    'contents' => [
+    'themes' => [
 
         'default' => [
 

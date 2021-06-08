@@ -4,10 +4,9 @@ use SewidanField\Field;
 
 if (!function_exists('field')) {
 
-    function field($defult = null)
+    function field($theme = null)
     {
-        $defult = $defult ? $defult : env('FIELD_DEFAULT_CONTENT','default');
-        $field = new SewidanField\Field($defult);
+        $field = new SewidanField\Field($theme);
         return $field;
     }
 

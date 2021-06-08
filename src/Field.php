@@ -15,11 +15,11 @@ class Field
     private $config;
     private $view_path = 'fields::fields';
 
-    function __construct($content = null)
+    function __construct($theme = null)
     {
-        $content = $content ? $content : config('field.default');
-        $config_contents = config('field.contents');
-        $config = isset($config_contents[$content]) ? $config_contents[$content] : $config_contents['default'];
+        $theme = $theme ? $theme : config('field.default_theme');
+        $config_themes = config('field.themes');
+        $config = isset($config_themes[$theme]) ? $config_themes[$theme] : $config_themes['default'];
         $this->config = $config;
     }
 

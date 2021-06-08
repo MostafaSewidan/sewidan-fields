@@ -1,16 +1,11 @@
-<div class="form-group {{$errors->has($name) ? 'has-error':'' }}" id="{{$name}}_wrap">
-    <label class="col-md-2">
-        {{ $label }}
-    </label>
-    <div class="col-md-9">
-        {!! Form::textarea($name, $value, [
-           "placeholder" => $label,
-            "class" => 'form-control Editor',
-           "rows" => "80",
-           "cols" => "8",
-           "data-name" => $name,
-           "id" => $name
-           ]) !!}
-        <span class="help-block">{{$errors->first($name)}}</span>
-    </div>
-</div>
+@extends('fields::layouts.field-app')
+@section('field')
+    {!! Form::textarea($name, $value, [
+       "placeholder" => $label,
+       "class" => (isset($field_attributes['class'])) ? $field_attributes['class'] : "form-control Editor",
+       "rows" => (isset($field_attributes['rows'])) ? $field_attributes['rows'] : "80",
+       "cols" => (isset($field_attributes['cols'])) ? $field_attributes['cols'] : "8",
+       "data-name" => (isset($field_attributes['data-name'])) ? $field_attributes['data-name'] : $name,
+       "id" => $name
+       ]) !!}
+@endsection

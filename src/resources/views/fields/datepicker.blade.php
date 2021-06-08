@@ -1,15 +1,12 @@
-<div class="form-group {{$errors->has($name) ? 'has-error':'' }}" id="{{$name}}_wrap">
-    <label for="{{$name}}">{{$label}}</label>
-    <div class="">
-
-        {!! Form::text($name, $value, [
-        "placeholder" => $label,
-        "class" => "form-control ".$plugin,
-        "autocomplete" => "off",
-        "max" => $max ? $max : \Carbon\Carbon::now()->toDateTimeString(),
-        "min" => $min ? $max : \Carbon\Carbon::now()->subYears(200)->toDateTimeString(),
-        "id" => $name
-        ]) !!}
-    </div>
-    <span class="help-block"><strong id="{{$name}}_error">{{$errors->first($name)}}</strong></span>
-</div>
+@extends('fields::layouts.field-app')
+@section('field')
+    {!! Form::text($name, $value, [
+       "placeholder" => $label,
+       "autocomplete" => "off",
+       "class" => (isset($field_attributes['class'])) ? $field_attributes['class'] : "form-control datepicker",
+       "data-name" => (isset($field_attributes['data-name'])) ? $field_attributes['data-name'] : $name,
+       "max" => (isset($field_attributes['max'])) ? (isset($field_attributes['max'])) : \Carbon\Carbon::now()->toDateTimeString(),
+       "min" => (isset($field_attributes['min'])) ? (isset($field_attributes['min'])) : \Carbon\Carbon::now()->subYears(200)->toDateTimeString(),
+       "id" => $name
+       ]) !!}
+@endsection

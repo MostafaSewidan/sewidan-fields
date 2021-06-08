@@ -1,13 +1,9 @@
-<div class="form-group {{$errors->has($name) ? 'has-error':'' }}" id="{{$name}}_wrap">
-    <label for="{{$name}}">{{$label}}</label>
-    <div class="">
-
-        {!! Form::time($name, $value, [
-           "placeholder" => $label,
-           "class" => "form-control",
-           "id" => $name
-           ]) !!}
-
-    </div>
-    <span class="help-block"><strong id="{{$name}}_error">{{$errors->first($name)}}</strong></span>
-</div>
+@extends('fields::layouts.field-app')
+@section('field')
+    {!! Form::time($name, $value, [
+       "placeholder" => $label,
+       "class" => (isset($field_attributes['class'])) ? $field_attributes['class'] : "form-control",
+       "data-name" => (isset($field_attributes['data-name'])) ? $field_attributes['data-name'] : $name,
+       "id" => $name
+       ]) !!}
+@endsection

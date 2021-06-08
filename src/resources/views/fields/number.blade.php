@@ -1,14 +1,9 @@
-<div class="form-group {{$errors->has($name) ? 'has-error':'' }}" id="{{$name}}_wrap">
-    <label class="col-md-2">
-        {{ $label }}
-    </label>
-    <div class="col-md-9">
-        {!! Form::number($name, $value, [
-           "placeholder" => $label,
-           "class" => "form-control",
-           "data-name" => $name,
-           "id" => $name
-           ]) !!}
-        <div class="help-block"></div>
-    </div>
-</div>
+@extends('fields::layouts.field-app')
+@section('field')
+    {!! Form::number($name, $value, [
+       "placeholder" => $label,
+       "class" => (isset($field_attributes['class'])) ? $field_attributes['class'] : "form-control",
+       "data-name" => (isset($field_attributes['data-name'])) ? $field_attributes['data-name'] : $name,
+       "id" => $name
+       ]) !!}
+@endsection

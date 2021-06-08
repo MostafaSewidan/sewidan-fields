@@ -11,22 +11,40 @@ use Form;
  */
 class Field{
 
+    private $config;
+    private $view_path = 'fields::fields';
+
     public function isDeferred(){
         return false;
     }
 
 
-    function __construct()
+    function __construct($content = null)
     {
-
+        $content = $content ? $content : config('field.default');
+        $config_contents = config('field.contents');
+        $config = isset($config_contents[$content]) ? $config_contents[$content] : $config_contents['default'];
+        $this->config = $config;
     }
 
     /**
-     * @return string
+     * @param $view
+     * @param array $params
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    private function view($view, $params = [])
+    {
+        $params['config'] = $this->config;
+        return view($this->view_path.'.'. $view, $params);
+    }
+
+    /**
+     * @return array|string
+     * @throws \Throwable
      */
     public function langNavTabs()
     {
-            return view('fields::fields.lang-nav-tabs')->render();
+            return $this->view('lang-nav-tabs')->render();
     }
 
     /**
@@ -34,11 +52,12 @@ class Field{
      * @param $label
      * @param null $value
      * @param array $options
-     * @return string
+     * @return array|string
+     * @throws \Throwable
      */
     public function text($name, $label, $value = null,$options = [])
     {
-        return view('fields::fields.text',compact('name','label','value','options'))->render();
+        return $this->view('text',compact('name','label','value','options'))->render();
     }
 
     /**
@@ -49,7 +68,7 @@ class Field{
      */
     public function dateTime($name, $label, $value = null)
     {
-        return view('fields::fields.date-time',compact('name','label','value'))->render();
+        return $this->view('date-time',compact('name','label','value'))->render();
     }
 
     /**
@@ -60,7 +79,7 @@ class Field{
      */
     public function time($name, $label, $value = null)
     {
-        return view('fields::fields.time',compact('name','label','value'))->render();
+        return $this->view('time',compact('name','label','value'))->render();
     }
 
     /**
@@ -73,7 +92,7 @@ class Field{
     {
         $step = inArray('step' , $array , '0.01');
 
-        return view('fields::fields.number',compact('name','label','value','step'))->render();
+        return $this->view('number',compact('name','label','value','step'))->render();
     }
 
     /**
@@ -87,7 +106,7 @@ class Field{
         $class = inArray('class' , $array , 'btn btn-primary');
         $id = inArray('id' , $array , 'ajax-button');
 
-        return view('fields::fields.ajax-btn',compact('name','class','type','id'))->render();
+        return $this->view('ajax-btn',compact('name','class','type','id'))->render();
     }
 
     /**
@@ -98,7 +117,7 @@ class Field{
      */
     public function email($name, $label,$value = null)
     {
-        return view('fields::fields.email',compact('name','label','value'))->render();
+        return $this->view('email',compact('name','label','value'))->render();
     }
 
     /**
@@ -108,7 +127,7 @@ class Field{
      */
     public function password($name, $label)
     {
-        return view('fields::fields.password',compact('name','label'))->render();
+        return $this->view('password',compact('name','label'))->render();
     }
 
     /**
@@ -122,7 +141,7 @@ class Field{
      */
     public function datePicker($name, $label, $value = null ,$min = null , $max = null , $plugin = 'datepicker')
     {
-        return view('fields::fields.datepicker',compact('name','label','value','plugin','max','min'))->render();
+        return $this->view('datepicker',compact('name','label','value','plugin','max','min'))->render();
     }
 
     /**
@@ -135,7 +154,7 @@ class Field{
      */
     public function date($name, $label, $value = null , $max = null , $min = null)
     {
-        return view('fields::fields.date',compact('name','label','value','max','min'))->render();
+        return $this->view('date',compact('name','label','value','max','min'))->render();
     }
 
     /**
@@ -149,7 +168,7 @@ class Field{
      */
     public function select($name, $label, $options, $selected = null , $plugin = 'select2', $placeholder = 'اختر قيمة')
     {
-        return view('fields::fields.select',compact('name','label', 'options' ,'selected','plugin','placeholder'))->render();
+        return $this->view('select',compact('name','label', 'options' ,'selected','plugin','placeholder'))->render();
     }
     
     
@@ -164,7 +183,7 @@ class Field{
      */
     public function multiFileUpload($name , $label , $plugin = "file_upload_preview")
     {
-        return view('fields::fields.multiFile-upload',compact('name','label','plugin'))->render();
+        return $this->view('multiFile-upload',compact('name','label','plugin'))->render();
     }
 
     /**
@@ -176,7 +195,7 @@ class Field{
      */
     public function textarea($name, $label , $value = null , $options = [])
     {
-        return view('fields::fields.textarea',compact('name','label','value','options'))->render();
+        return $this->view('textarea',compact('name','label','value','options'))->render();
     }
 
     /**
@@ -190,7 +209,7 @@ class Field{
      */
     public function editor($name, $label , $value = null , $plugin = 'summernote')
     {
-        return view('fields::fields.editor',compact('name','label','value','plugin'))->render();
+        return $this->view('editor',compact('name','label','value','plugin'))->render();
     }
 
     /**
@@ -201,12 +220,12 @@ class Field{
      */
     public function fileWithPreview($name, $label , $options = [])
     {
-        return view('fields::fields.file',compact('name','label' ,'options'))->render();
+        return $this->view('file',compact('name','label' ,'options'))->render();
     }
 
     public function checkBox($name, $label ,$options = [])
     {
-        return view('fields::fields.check-box',compact('name','label','options'))->render();
+        return $this->view('check-box',compact('name','label','options'))->render();
     }
 
     /**
@@ -218,6 +237,6 @@ class Field{
      */
     public function radio($name, $label ,$options , $checked = null)
     {
-        return view('fields::fields.radio',compact('name','label','options','checked'))->render();
+        return $this->view('radio',compact('name','label','options','checked'))->render();
     }
 }

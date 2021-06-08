@@ -26,7 +26,7 @@ if (!function_exists('sewidanOptionsToStr')) {
         $response = '';
 
         foreach ($options as $option => $value) :
-            $response .= $option .'="'. $value .'" ';
+            $response .= $option .'='. $value .' ';
         endforeach;
 
         return $response;

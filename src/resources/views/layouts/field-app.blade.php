@@ -8,10 +8,10 @@
 @if($config_container)
     <div class="{{isset($config_container['class']) ? $config_container['class'] :'' }} {{$errors->has($name) ? 'has-error':'' }}"
          id="{{$name}}_wrap">
-@endif
+        @endif
 
         @if($config_label)
-            {!! Form::label($name, $label , isset($config_container['options']) ? $config_container['options'] : null) !!}
+            {!! Form::label($name, $label , isset($config_label['options']) ? $config_label['options'] : null) !!}
         @endif
 
         @if($config_field_div)
@@ -23,7 +23,7 @@
 
                 @if($config_field_error)
 
-                    <span {{isset($config_field_div['options']) ? sewidanOptionsToStr($config_field_div['options']) : ''}}>
+                    <span {{isset($config_field_error['options']) ? sewidanOptionsToStr($config_field_error['options']) : ''}}>
                         {{$errors->first($name)}}
                     </span>
                 @endif
@@ -32,6 +32,6 @@
             </div>
         @endif
 
-@if($config_container)
+        @if($config_container)
     </div>
 @endif

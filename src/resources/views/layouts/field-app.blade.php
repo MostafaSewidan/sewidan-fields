@@ -8,7 +8,7 @@
 @if($config_container)
     <div class="{{isset($config_container['class']) ? $config_container['class'] :'' }} {{$errors->has($name) ? 'has-error':'' }}"
          id="{{$name}}_wrap">
-        @endif
+@endif
 
         @if($config_label)
             {!! Form::label($name, $label , isset($config_container['options']) ? $config_container['options'] : null) !!}
@@ -32,6 +32,6 @@
             </div>
         @endif
 
-        @if($config_container)
+@if($config_container)
     </div>
 @endif

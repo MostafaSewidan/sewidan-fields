@@ -14,11 +14,6 @@ class Field{
     private $config;
     private $view_path = 'fields::fields';
 
-    public function isDeferred(){
-        return false;
-    }
-
-
     function __construct($content = null)
     {
         $content = $content ? $content : config('field.default');

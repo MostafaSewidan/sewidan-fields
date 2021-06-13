@@ -155,6 +155,18 @@ class Field
         return $this->view('select', compact('name', 'label', 'options', 'selected', 'field_attributes'))->render();
     }
 
+    /**
+     * @param $name
+     * @param $label
+     * @param $options
+     * @param null $selected
+     * @param array $field_attributes
+     * @return string
+     */
+    public function multiSelect($name, $label, $options, $selected = null, $field_attributes = [])
+    {
+        return $this->view('multi-select', compact('name', 'label', 'options', 'selected', 'field_attributes'))->render();
+    }
 
     /**
      * @param $name
@@ -165,6 +177,19 @@ class Field
     public function multiFileUpload($name, $label, $field_attributes = [])
     {
         return $this->view('multiFile-upload', compact('name', 'label', 'field_attributes'))->render();
+    }
+
+
+    /**
+     * @param $name
+     * @param $label
+     * @param null $value
+     * @param array $field_attributes
+     * @return string
+     */
+    public function fileManger($name, $label, $value = null , $field_attributes = [])
+    {
+        return $this->view('file', compact('name', 'label','value','field_attributes'))->render();
     }
 
     /**
@@ -193,12 +218,13 @@ class Field
     /**
      * @param $name
      * @param $label
+     * @param null $value
      * @param array $field_attributes
      * @return string
      */
-    public function checkBox($name, $label, $field_attributes = [])
+    public function checkBox($name, $label, $value = null, $field_attributes = [])
     {
-        return $this->view('check-box', compact('name', 'label', 'field_attributes'))->render();
+        return $this->view('check-box', compact('name', 'label','value', 'field_attributes'))->render();
     }
 
     /**

@@ -1,12 +1,6 @@
-
-<div class="form-group {{$errors->has($name) ? 'has-error':'' }}" id="{{$name}}_wrap">
-    <label for="{{$name}}" class="col-md-2">{{$label}}</label>
-    <div class="col-md-9">
-        {!! Form::checkbox($name , null , null ,[
-            'class' => 'make-switch',
-            'id' => $name,
-            'data-size' => 'small',
-        ]) !!}
-        <div class="help-block"></div>
-    </div>
-</div>
+{!! Form::checkbox($name, $label, $value , [
+    "class" => (isset($field_attributes['class'])) ? $field_attributes['class'] : "make-switch",
+    "data-name" => (isset($field_attributes['data-name'])) ? $field_attributes['data-name'] : $name,
+    "id" => $name,
+    "data-size" => (isset($field_attributes['data-size'])) ? $field_attributes['data-size'] : 'small',
+]) !!}

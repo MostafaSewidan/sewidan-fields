@@ -6,11 +6,22 @@ if (!function_exists('field')) {
 
     function field($theme = null)
     {
-        $field = new SewidanField\Field($theme);
+        $field = new Field($theme);
         return $field;
     }
 
 }
+
+
+// GET THE CURRENT LOCALE
+if (! function_exists('locale')) {
+
+    function locale() {
+        return app()->getLocale();
+    }
+
+}
+
 if (!function_exists('SewidanGetTagConfig')) {
 
     function SewidanGetTagConfig($type, $config)
@@ -33,6 +44,28 @@ if (!function_exists('sewidanOptionsToStr')) {
         endforeach;
 
         return $response;
+    }
+
+}
+
+if (! function_exists('fieldOptionExists')) {
+
+    function fieldOptionExists($options , $key , $value = false){
+
+        if(array_key_exists($key,$options)) {
+            if($options[$key] == null)
+                return false;
+
+            if($value != false) {
+                if($options[$key] == $value) {
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            return true;
+        }
+        return  false;
     }
 
 }

@@ -1,5 +1,4 @@
-@extends('fields::layouts.field-app')
-@section('field')
+
     {!! Form::select($name.'[]', $options, $selected , [
        "data-placeholder" => $label,
        "class" => (isset($field_attributes['class'])) ? $field_attributes['class'] : "form-control select2",
@@ -7,4 +6,3 @@
        "multiple" => "multiple",
        "id" => $name
        ]) !!}
-@endsection

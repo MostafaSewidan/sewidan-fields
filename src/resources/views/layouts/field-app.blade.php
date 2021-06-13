@@ -18,7 +18,7 @@
             <div {{isset($config_field_div['options']) ? sewidanOptionsToStr($config_field_div['options']) : ''}}>
                 @endif
 
-                @yield('field')
+                @include('fields::fields.'. $field_type)
 
 
                 @if($config_field_error)

@@ -14,6 +14,7 @@ class Field
 
     private $config;
     private $view_path = 'fields::fields';
+    private $app_path = 'fields::layouts.field-app';
 
     function __construct($theme = null)
     {
@@ -23,15 +24,17 @@ class Field
         $this->config = $config;
     }
 
+
     /**
-     * @param $view
+     * @param $field_type
      * @param array $params
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    private function view($view, $params = [])
+    private function view($field_type , $params = [])
     {
         $params['config'] = $this->config;
-        return view($this->view_path . '.' . $view, $params);
+        $params['field_type'] = $field_type;
+        return view($this->app_path, $params);
     }
 
     /**
@@ -40,7 +43,7 @@ class Field
      */
     public function langNavTabs()
     {
-        return $this->view('lang-nav-tabs')->render();
+        return view($this->view_path.'.lang-nav-tabs')->render();
     }
 
     /**

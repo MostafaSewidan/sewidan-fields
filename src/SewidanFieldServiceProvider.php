@@ -7,6 +7,7 @@ class SewidanFieldServiceProvider extends ServiceProvider {
         $this->loadViewsFrom(__DIR__.'/resources/views', 'fields');
         $this->publishes([
             __DIR__.'/../config/field.php' => config_path('field.php'),
+            __DIR__.'/../public' => public_path('SewidanField'),
         ]);
     }
 

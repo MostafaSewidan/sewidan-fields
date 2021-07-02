@@ -3,7 +3,7 @@
 ## Installation
 
 
-###You can install the package via composer
+#### You can install the package via composer
 
 ```bash
 composer require mostafasewidan/sewidan-field
@@ -30,7 +30,7 @@ You can make field with any type
 ```
 
 
-####Output
+##### Output
 
 ```html
    <div class="form-group " id="{{$name}}_wrap">
@@ -78,7 +78,7 @@ Fields is created using [laravel collective](https://laravelcollective.com)
  where you Publishing the provider you will find `config/field.php` file 
  you can control the content of `HTML` response by creating and switching themes 
  
- ###themes map keys
+ #### themes map keys
  ```html
     {{-- container --}} <div class="form-group " id="{{$name}}_wrap">
     {{-- label --}}         <label for="{{$name}}" class="col-md-2" style=""> {{$label}} </label>
@@ -88,7 +88,7 @@ Fields is created using [laravel collective](https://laravelcollective.com)
                             </div>
                         </div>
  ```
- ###Control Themes in `config/field.php`
+ #### Control Themes in `config/field.php`
  ```php
      'default_theme' => env('FIELD_DEFAULT_THEME','default'),
      
@@ -131,7 +131,7 @@ Fields is created using [laravel collective](https://laravelcollective.com)
  you can change the default theme by set key `FIELD_DEFAULT_THEME` with your default theme name in
  `.env` file or change it in `config/field.php` `'default_theme' => env('FIELD_DEFAULT_THEME','your default theme name')`
  
- ###switching themes while creating field 
+ #### switching themes while creating field 
  
  you can easily but your theme name to field function
  

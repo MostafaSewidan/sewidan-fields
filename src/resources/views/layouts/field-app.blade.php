@@ -12,6 +12,9 @@
 
         @if($config_label)
             {!! Form::label($name, $label , isset($config_label['options']) ? $config_label['options'] : null) !!}
+            @if(isset($field_attributes['required']) && $field_attributes['required'])
+                <span style="color: #f83333;">*</span>
+            @endif
         @endif
 
         @if($config_field_div)
@@ -37,7 +40,7 @@
 @endif
 @if(in_array($field_type , ['file','multiFile-upload']) && isset($field_attributes['class']) && strpos($field_attributes['class'],'file_upload_preview'))
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var head = document.head;
             var body = document.body;
             var link = document.createElement("link");
@@ -50,7 +53,7 @@
             var scripts = [
                 '{{asset('SewidanField/plugins/bootstrap-fileinput/js/fileinput.min.js')}}',
             ];
-            for(var i=0; i < 1; i++) {
+            for (var i = 0; i < 1; i++) {
                 var script = document.createElement("script");
                 script.type = "text/javascript";
                 script.src = scripts[i];

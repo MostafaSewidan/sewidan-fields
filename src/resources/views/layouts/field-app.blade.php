@@ -11,10 +11,12 @@
         @endif
 
         @if($config_label)
-            {!! Form::label($name, $label , isset($config_label['options']) ? $config_label['options'] : null) !!}
-            @if(isset($field_attributes['required']) && $field_attributes['required'])
-                <span style="color: #f83333;">*</span>
-            @endif
+            <label for="{{$name}}" {{isset($config_label['options']) ? sewidanOptionsToStr($config_label['options']) : ''}}>
+                {{$label}}
+                @if(isset($field_attributes['required']) && $field_attributes['required'])
+                    <span style="color: #f83333;">*</span>
+                @endif
+            </label>
         @endif
 
         @if($config_field_div)

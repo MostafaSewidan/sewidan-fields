@@ -11,7 +11,7 @@
         @endif
 
         @if($config_label)
-            <label for="{{$name}}" {{isset($config_label['options']) ? sewidanOptionsToStr($config_label['options']) : ''}}>
+            <label for="{{$name}}" {!! isset($config_label['options']) ? sewidanOptionsToStr($config_label['options']) : '' !!}>
                 {{$label}}
                 @if(isset($field_attributes['required']) && $field_attributes['required'])
                     <span style="color: #f83333;">*</span>
@@ -20,7 +20,7 @@
         @endif
 
         @if($config_field_div)
-            <div {{isset($config_field_div['options']) ? sewidanOptionsToStr($config_field_div['options']) : ''}}>
+            <div {!! isset($config_field_div['options']) ? sewidanOptionsToStr($config_field_div['options']) : '' !!}>
                 @endif
 
                 @include('fields::fields.'. $field_type)
@@ -28,7 +28,7 @@
 
                 @if($config_field_error)
 
-                    <span {{isset($config_field_error['options']) ? sewidanOptionsToStr($config_field_error['options']) : ''}}>
+                    <span {!! isset($config_field_error['options']) ? sewidanOptionsToStr($config_field_error['options']) : '' !!}>
                         {{$errors->first($name)}}
                     </span>
                 @endif

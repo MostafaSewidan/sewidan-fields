@@ -68,29 +68,31 @@
 @if(isset($field_attributes['class']) && strpos($field_attributes['class'],'ckeditor5'))
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var head = document.head;
-            var body = document.body;
-            var link = document.createElement("link");
+            if (window.ckeditorInsialize === undefined) {
+                window.ckeditorInsialize = true;
+                var head = document.head;
+                var body = document.body;
+                var link = document.createElement("link");
 
-            link.type = "text/css";
-            link.rel = "stylesheet";
-            link.href = '{{asset('SewidanField/plugins/ck-editor-5/css/ckeditor.css')}}';
-            head.appendChild(link);
+                link.type = "text/css";
+                link.rel = "stylesheet";
+                link.href = '{{asset('SewidanField/plugins/ck-editor-5/css/ckeditor.css')}}';
+                head.appendChild(link);
 
-            var scripts = [
-                '{{asset('SewidanField/plugins/ck-editor-5/js/ckeditor.js')}}',
-                '{{asset('SewidanField/plugins/ck-editor-5/js/ckEditorScripts.js')}}',
-            ];
-            for (var i = 0; i < 2; i++) {
-                var script = document.createElement("script");
-                script.type = "text/javascript";
-                script.src = scripts[i];
-                body.append(script);
-            }
+                var scripts = [
+                    '{{asset('SewidanField/plugins/ck-editor-5/js/ckeditor.js')}}',
+                    '{{asset('SewidanField/plugins/ck-editor-5/js/ckEditorScripts.js')}}',
+                ];
+                for (var i = 0; i < 2; i++) {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = scripts[i];
+                    body.append(script);
+                }
 
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            var code = `const editors = {};
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                var code = `const editors = {};
                 jQuery('.ckeditor5').each(function(index, currentElement) {
 
                     ClassicEditor.create(currentElement, {
@@ -114,12 +116,13 @@
                     );
                 });`;
 
-            try {
-                script.appendChild(document.createTextNode(code));
-                document.body.appendChild(script);
-            } catch (e) {
-                script.text = code;
-                document.body.appendChild(script);
+                try {
+                    script.appendChild(document.createTextNode(code));
+                    document.body.appendChild(script);
+                } catch (e) {
+                    script.text = code;
+                    document.body.appendChild(script);
+                }
             }
         }, false);
     </script>

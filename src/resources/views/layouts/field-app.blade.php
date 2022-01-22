@@ -92,29 +92,33 @@
 
                 var script = document.createElement('script');
                 script.type = 'text/javascript';
-                var code = `const editors = {};
-                jQuery('.ckeditor5').each(function(index, currentElement) {
+                var code = `
+                $( document ).ready(function() {
+                    const editors = {};
+                    jQuery('.ckeditor5').each(function(index, currentElement) {
 
-                    ClassicEditor.create(currentElement, {
+                        ClassicEditor.create(currentElement, {
 
-                        licenseKey: '',
-                        autosave: {
-                            save( editor,currentElement ) {
-                                $(currentElement).val(editor.getData());
-                            }
-                        },
-                    })
-                        .then(editor => {
+                            licenseKey: '',
+                            autosave: {
+                                save( editor,currentElement ) {
+                                    $(currentElement).val(editor.getData());
+                                }
+                            },
+                        })
+                            .then(editor => {
 
-                            editors[  $(currentElement).attr('id') ] = editor;
-                            // window.editor = editor;
+                                editors[  $(currentElement).attr('id') ] = editor;
+                                // window.editor = editor;
 
-                            editor.plugins.get( 'FileRepository' ).createUploadAdapter = ( loader ) => {
-                                return new MyUploadAdapter( loader ,'{{route('ckeditor.upload')}}');
-                            };
-                        } ).catch(error => {}
-                    );
-                });`;
+                                editor.plugins.get( 'FileRepository' ).createUploadAdapter = ( loader ) => {
+                                    return new MyUploadAdapter( loader ,'{{route('ckeditor.upload')}}');
+                                };
+                            } ).catch(error => {}
+                        );
+                    });
+                });
+                `;
 
                 try {
                     script.appendChild(document.createTextNode(code));

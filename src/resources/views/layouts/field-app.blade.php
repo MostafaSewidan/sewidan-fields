@@ -117,6 +117,8 @@
                 });
             };
 
+            body.append(script);
+
         }, false);
     </script>
 @endif

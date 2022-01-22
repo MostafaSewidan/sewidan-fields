@@ -317,6 +317,26 @@ class Field
     /**
      * @param $name
      * @param $label
+     * @param null $value
+     * @param array $field_attributes
+     * @return string
+     */
+    public function ckEditor5($name, $label, $value = null, $field_attributes = [])
+    {
+        $field_attributes = $this->buildFieldAttributes($field_attributes , [
+            "placeholder" => $label,
+            "class" => "form-control ckeditor5",
+            "rows" => "8",
+            "cols" => "8",
+            "data-name" => $name,
+            "id" => $name
+        ]);
+        return $this->view('ck-editor-5', compact('name', 'label', 'value', 'field_attributes'))->render();
+    }
+
+    /**
+     * @param $name
+     * @param $label
      * @param array $field_attributes
      * @return string
      */

@@ -65,3 +65,58 @@
         }, false);
     </script>
 @endif
+@if(isset($field_attributes['class']) && strpos($field_attributes['class'],'ckeditor5'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var head = document.head;
+            var body = document.body;
+            var link = document.createElement("link");
+
+            link.type = "text/css";
+            link.rel = "stylesheet";
+            link.href = '{{asset('SewidanField/plugins/ck-editor-5/css/ckeditor.css')}}';
+            head.appendChild(link);
+
+            var scripts = [
+                '{{asset('SewidanField/plugins/ck-editor-5/js/ckeditor.js')}}',
+                '{{asset('SewidanField/plugins/ck-editor-5/js/ckEditorScripts.js')}}',
+            ];
+            for (var i = 0; i < 1; i++) {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = scripts[i];
+                body.append(script);
+            }
+
+            var script = document.createElement('script');
+            script.onload = function() {
+                const editors = {};
+
+                jQuery('.ckeditor5').each(function(index, currentElement) {
+
+                    ClassicEditor.create(currentElement, {
+
+                        licenseKey: '',
+                        autosave: {
+                            save( editor,currentElement ) {
+                                $(currentElement).val(editor.getData());
+                            }
+                        },
+                    })
+                        .then(editor => {
+
+                            editors[  $(currentElement).attr('id') ] = editor;
+                            // window.editor = editor;
+
+                            editor.plugins.get( 'FileRepository' ).createUploadAdapter = ( loader ) => {
+                                return new MyUploadAdapter( loader ,'{{route('ckeditor.upload')}}');
+                            };
+                        } ).catch(error => {}
+                    );
+
+                });
+            };
+
+        }, false);
+    </script>
+@endif

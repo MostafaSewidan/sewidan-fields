@@ -81,7 +81,7 @@
                 '{{asset('SewidanField/plugins/ck-editor-5/js/ckeditor.js')}}',
                 '{{asset('SewidanField/plugins/ck-editor-5/js/ckEditorScripts.js')}}',
             ];
-            for (var i = 0; i < 1; i++) {
+            for (var i = 0; i < 2; i++) {
                 var script = document.createElement("script");
                 script.type = "text/javascript";
                 script.src = scripts[i];
@@ -89,9 +89,8 @@
             }
 
             var script = document.createElement('script');
-            script.onload = function() {
-                const editors = {};
-
+            script.type = 'text/javascript';
+            var code = `const editors = {};
                 jQuery('.ckeditor5').each(function(index, currentElement) {
 
                     ClassicEditor.create(currentElement, {
@@ -113,12 +112,15 @@
                             };
                         } ).catch(error => {}
                     );
+                });`;
 
-                });
-            };
-
-            body.append(script);
-
+            try {
+                script.appendChild(document.createTextNode(code));
+                document.body.appendChild(script);
+            } catch (e) {
+                script.text = code;
+                document.body.appendChild(script);
+            }
         }, false);
     </script>
 @endif

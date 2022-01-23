@@ -19,7 +19,7 @@ function addAttachment($file, $folder_name)
         File::makeDirectory($destinationPath, 0755, true, true);
     }
 
-    $image = $save.'-'.time().''.rand(11111, 99999).'.'.$extension;
+    $image = '-'.time().''.rand(11111, 99999).'.'.$extension;
     $file->move($destinationPath, $image); // uploading file to given
     $path = 'uploads/'.$folder_name.'/'.$image;
 

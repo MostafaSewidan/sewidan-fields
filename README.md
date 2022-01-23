@@ -144,3 +144,29 @@ if you used field without entered theme name automatically function use the defa
 ```php
     field()->text('name','label','value',[]); // take default theme in config file
 ```
+
+ ### CK editor (5) :
+ 
+ ####usage
+ 
+ first you must append `script and style files` to your layouts
+  
+```html
+    {{-- styles --}}
+    <link href="{{asset('SewidanField/plugins/ck-editor-5/css/ckeditor.css')}}" rel="stylesheet" id="style_components" type="text/css" />
+
+    {{-- scripts --}}
+    <script src="{{asset('SewidanField/plugins/ck-editor-5/js/ckeditor.js')}}"></script>
+    <script src="{{asset('SewidanField/plugins/ck-editor-5/js/ckEditorScripts.js')}}"></script>
+```
+after appending script and style files , you can use it simple like this
+```php
+    field()->ckEditor5('name','label','value',[]);
+```
+don't forget to add this script on submitting your form 
+
+```javascript
+    $.each(editors, function (index, editor) {
+        editor.updateSourceElement()
+    });
+```

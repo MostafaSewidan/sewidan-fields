@@ -130,5 +130,30 @@
                 }
             }
         }, false);
+        $( document ).ready(function() {
+            const editors = {};
+            jQuery('.ckeditor5').each(function(index, currentElement) {
+
+                ClassicEditor.create(currentElement, {
+
+                    licenseKey: '',
+                    autosave: {
+                        save( editor,currentElement ) {
+                            $(currentElement).val(editor.getData());
+                        }
+                    },
+                })
+                    .then(editor => {
+
+                        editors[  $(currentElement).attr('id') ] = editor;
+                        // window.editor = editor;
+
+                        editor.plugins.get( 'FileRepository' ).createUploadAdapter = ( loader ) => {
+                            return new MyUploadAdapter( loader ,'{{route('ckeditor.upload')}}');
+                        };
+                    } ).catch(error => {}
+                );
+            });
+        });
     </script>
 @endif

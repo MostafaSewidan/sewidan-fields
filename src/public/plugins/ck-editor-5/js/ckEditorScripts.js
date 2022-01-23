@@ -91,5 +91,3 @@ class MyUploadAdapter {
         }
     }
 }
-
-generateCkEditor5();

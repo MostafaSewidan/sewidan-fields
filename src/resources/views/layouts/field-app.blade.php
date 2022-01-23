@@ -66,6 +66,8 @@
     </script>
 @endif
 @if(isset($field_attributes['class']) && strpos($field_attributes['class'],'ckeditor5'))
+    <script src="{{asset('SewidanField/plugins/ck-editor-5/js/ckeditor.js')}}" defer></script>
+    <script src="{{asset('SewidanField/plugins/ck-editor-5/js/ckEditorScripts.js')}}" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (window.ckeditorInsialize === undefined) {
@@ -129,6 +131,8 @@
                     script.src = scripts[i];
                     body.append(script);
                 }
+
+                generateCkEditor5();
             }
         }, false);
 

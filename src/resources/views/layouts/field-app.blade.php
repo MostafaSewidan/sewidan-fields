@@ -79,46 +79,35 @@
                 link.href = '{{asset('SewidanField/plugins/ck-editor-5/css/ckeditor.css')}}';
                 head.appendChild(link);
 
-                var scripts = [
-                    '{{asset('SewidanField/plugins/ck-editor-5/js/ckeditor.js')}}',
-                    '{{asset('SewidanField/plugins/ck-editor-5/js/ckEditorScripts.js')}}',
-                ];
-                for (var i = 0; i < 2; i++) {
-                    var script = document.createElement("script");
-                    script.type = "text/javascript";
-                    script.src = scripts[i];
-                    body.append(script);
-                }
-
                 var script = document.createElement('script');
                 script.type = 'text/javascript';
                 var code = `
                 const editors = {};
-        function generateCkEditor5(){
-            jQuery('.ckeditor5').each(function (index, currentElement) {
+                function generateCkEditor5(){
+                    jQuery('.ckeditor5').each(function (index, currentElement) {
 
-                ClassicEditor.create(currentElement, {
+                        ClassicEditor.create(currentElement, {
 
-                    licenseKey: '',
-                    autosave: {
-                        save(editor, currentElement) {
-                            $(currentElement).val(editor.getData());
-                        }
-                    },
-                })
-                    .then(editor => {
+                            licenseKey: '',
+                            autosave: {
+                                save(editor, currentElement) {
+                                    $(currentElement).val(editor.getData());
+                                }
+                            },
+                        })
+                            .then(editor => {
 
-                        editors[$(currentElement).attr('id')] = editor;
-                        // window.editor = editor;
+                                editors[$(currentElement).attr('id')] = editor;
+                                // window.editor = editor;
 
-                        editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
-                            return new MyUploadAdapter(loader, '{{route('ckeditor.upload')}}');
-                        };
-                    }).catch(error => {
-                    }
-                );
-            });
-        }
+                                editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
+                                    return new MyUploadAdapter(loader, '{{route('ckeditor.upload')}}');
+                                };
+                            }).catch(error => {
+                            }
+                        );
+                    });
+                }
                 `;
 
                 try {
@@ -128,6 +117,17 @@
                 } catch (e) {
                     script.text = code;
                     document.body.appendChild(script);
+                }
+
+                var scripts = [
+                    '{{asset('SewidanField/plugins/ck-editor-5/js/ckeditor.js')}}',
+                    '{{asset('SewidanField/plugins/ck-editor-5/js/ckEditorScripts.js')}}',
+                ];
+                for (var i = 0; i < 2; i++) {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = scripts[i];
+                    body.append(script);
                 }
             }
         }, false);

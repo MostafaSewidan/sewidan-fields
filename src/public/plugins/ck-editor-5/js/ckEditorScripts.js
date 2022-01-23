@@ -91,32 +91,32 @@ class MyUploadAdapter {
         }
     }
 }
+const editors = {};
+function generateCkEditor5(){
 
-if (window.editors === undefined) {
-    const editors = {};
-}
+    jQuery('.ckeditor5').each(function (index, currentElement) {
 
-jQuery('.ckeditor5').each(function (index, currentElement) {
+        ClassicEditor.create(currentElement, {
 
-    ClassicEditor.create(currentElement, {
+            licenseKey: '',
+            autosave: {
+                save(editor, currentElement) {
+                    $(currentElement).val(editor.getData());
+                }
+            },
+        })
+            .then(editor => {
 
-        licenseKey: '',
-        autosave: {
-            save(editor, currentElement) {
-                $(currentElement).val(editor.getData());
+                editors[$(currentElement).attr('id')] = editor;
+                // window.editor = editor;
+
+                editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
+
+                    return new MyUploadAdapter(loader, window.location.origin + '/ckeditor/upload');
+                };
+            }).catch(error => {
             }
-        },
-    })
-        .then(editor => {
-
-            editors[$(currentElement).attr('id')] = editor;
-            // window.editor = editor;
-
-            editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
-
-                return new MyUploadAdapter(loader, window.location.origin + '/ckeditor/upload');
-            };
-        }).catch(error => {
-        }
-    );
-});
+        );
+    });
+}
+generateCkEditor5();

@@ -121,8 +121,9 @@
                 `;
 
                 try {
-                    script.appendChild(document.createTextNode(code));
-                    document.body.appendChild(script);
+                    body.append(script);
+                    // script.appendChild(document.createTextNode(code));
+                    // document.body.appendChild(script);
                 } catch (e) {
                     script.text = code;
                     document.body.appendChild(script);

@@ -42,58 +42,30 @@
 @endif
 @if(in_array($field_type , ['file','multiFile-upload']) && isset($field_attributes['class']) && strpos($field_attributes['class'],'file_upload_preview'))
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var head = document.head;
-            var body = document.body;
-            var link = document.createElement("link");
-
-            link.type = "text/css";
-            link.rel = "stylesheet";
-            link.href = '{{asset('SewidanField/plugins/bootstrap-fileinput/css/fileinput.min.css')}}';
-            head.appendChild(link);
-
-            var scripts = [
-                '{{asset('SewidanField/plugins/bootstrap-fileinput/js/fileinput.min.js')}}',
-            ];
-            for (var i = 0; i < 1; i++) {
-                var script = document.createElement("script");
-                script.type = "text/javascript";
-                script.src = scripts[i];
-                body.append(script);
-            }
-
-        }, false);
-    </script>
-@endif
-
-@if(isset($field_attributes['class']) && strpos($field_attributes['class'],'ckeditor5'))
-    <script>
         if (window.ckeditorInsialize === undefined) {
 
             window.ckeditorInsialize = true;
-            var head = document.head;
-            var body = document.body;
-
-            var scripts = [
-                '{{asset('SewidanField/plugins/ck-editor-5/js/ckeditor.js')}}',
-                '{{asset('SewidanField/plugins/ck-editor-5/js/ckEditorScripts.js')}}',
-            ];
-            for (var i = 0; i < 2; i++) {
-                var script = document.createElement("script");
-                script.type = "text/javascript";
-                script.defer = true;
-                script.src = scripts[i];
-                body.append(script);
-            }
             document.addEventListener('DOMContentLoaded', function () {
+                var head = document.head;
+                var body = document.body;
                 var link = document.createElement("link");
 
                 link.type = "text/css";
                 link.rel = "stylesheet";
-                link.href = '{{asset('SewidanField/plugins/ck-editor-5/css/ckeditor.css')}}';
+                link.href = '{{asset('SewidanField/plugins/bootstrap-fileinput/css/fileinput.min.css')}}';
                 head.appendChild(link);
+
+                var scripts = [
+                    '{{asset('SewidanField/plugins/bootstrap-fileinput/js/fileinput.min.js')}}',
+                ];
+                for (var i = 0; i < 1; i++) {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = scripts[i];
+                    body.append(script);
+                }
+
             }, false);
         }
-
     </script>
 @endif

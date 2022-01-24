@@ -38,6 +38,9 @@ return [
         ],
     ],
 
+    'ckeditor5' => [
+        'uploading_middleware' => []
+    ],
     'locales' => [
         'ace' => ['name' => 'Achinese', 'script' => 'Latn', 'native' => 'Aceh'],
         'af' => ['name' => 'Afrikaans', 'script' => 'Latn', 'native' => 'Afrikaans'],

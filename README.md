@@ -147,7 +147,7 @@ if you used field without entered theme name automatically function use the defa
 
  ### CK editor (5) :
  
- ####usage
+ ###usage
  
  first you must append `script and style files` to your layouts
   
@@ -166,7 +166,9 @@ after appending script and style files , you can use it simple like this
 don't forget to add this script on submitting your form 
 
 ```javascript
-    $.each(editors, function (index, editor) {
-        editor.updateSourceElement()
-    });
+    if (window.editors === undefined) {
+        $.each(editors, function (index, editor) {
+            editor.updateSourceElement()
+        });
+    }
 ```

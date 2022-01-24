@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe8afa90-8865-42a2-b1d1-13c501bd82c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Field.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Field.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/fields/lang-nav-tabs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/fields/lang-nav-tabs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/field-app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/field-app.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,16 +22,25 @@
         <entry file="file://$PROJECT_DIR$/src/Field.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
-              <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+              <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/views/fields/lang-nav-tabs.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/resources/views/fields/lang-nav-tabs.blade.php">
+        <entry file="file://$PROJECT_DIR$/src/resources/views/layouts/field-app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+            <state relative-caret-position="-29">
+              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -83,11 +91,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md.save">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -124,13 +127,13 @@
         <option value="$PROJECT_DIR$/src/app/Traits/Attachment/Attachment.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/filesAttachment.php" />
-        <option value="$PROJECT_DIR$/src/resources/views/layouts/field-app.blade.php" />
         <option value="$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js" />
         <option value="$PROJECT_DIR$/src/routes/web.php" />
         <option value="$PROJECT_DIR$/config/field.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Field.php" />
         <option value="$PROJECT_DIR$/src/resources/views/fields/lang-nav-tabs.blade.php" />
+        <option value="$PROJECT_DIR$/src/resources/views/layouts/field-app.blade.php" />
       </list>
     </option>
   </component>
@@ -185,6 +188,14 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="fields" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sewidan-fields" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sewidan-fields" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sewidan-fields" type="b2602c69:ProjectViewProjectNode" />
@@ -258,12 +269,12 @@
       <workItem from="1642891147186" duration="2931000" />
       <workItem from="1642897027035" duration="1323000" />
       <workItem from="1642927504320" duration="10394000" />
-      <workItem from="1643041095977" duration="703000" />
+      <workItem from="1643041095977" duration="921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19697000" />
+    <option name="totallyTimeSpent" value="19915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="829" extended-state="6" />
@@ -282,7 +293,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993565" weight="0.32842416" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993565" visible="true" weight="0.32842416" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5006435" side_tool="true" weight="0.32842416" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -312,13 +323,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Traits/Attachment/Attachment.php" />
-    <entry file="file://$PROJECT_DIR$/src/resources/views/layouts/field-app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/filesAttachment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -390,17 +394,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Field.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/views/fields/lang-nav-tabs.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Field.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/layouts/field-app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
         </state>
       </provider>
     </entry>

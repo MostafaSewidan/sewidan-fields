@@ -42,9 +42,9 @@
 @endif
 @if(in_array($field_type , ['file','multiFile-upload']) && isset($field_attributes['class']) && strpos($field_attributes['class'],'file_upload_preview'))
     <script>
-        if (window.ckeditorInsialize === undefined) {
+        if (window.file_upload_preview === undefined) {
 
-            window.ckeditorInsialize = true;
+            window.file_upload_preview = true;
             document.addEventListener('DOMContentLoaded', function () {
                 var head = document.head;
                 var body = document.body;

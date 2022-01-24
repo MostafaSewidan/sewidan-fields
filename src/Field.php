@@ -60,12 +60,12 @@ class Field
     }
 
     /**
-     * @return array|string
-     * @throws \Throwable
+     * @param $nav_id
+     * @return mixed
      */
-    public function langNavTabs()
+    public function langNavTabs($nav_id = 'first')
     {
-        return view($this->view_path.'.lang-nav-tabs')->render();
+        return view($this->view_path.'.lang-nav-tabs',compact('nav_id'))->render();
     }
 
     /**

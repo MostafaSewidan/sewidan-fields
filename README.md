@@ -166,7 +166,7 @@ after appending script and style files , you can use it simple like this
 don't forget to add this script on submitting your form 
 
 ```javascript
-    if (window.editors === undefined) {
+    if (window.editors == undefined) {
         $.each(editors, function (index, editor) {
             editor.updateSourceElement()
         });

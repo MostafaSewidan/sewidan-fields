@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fe8afa90-8865-42a2-b1d1-13c501bd82c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,11 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
               <caret line="16" column="29" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Field.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4284">
+              <caret line="307" column="47" selection-start-line="307" selection-start-column="47" selection-end-line="307" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -72,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1694">
-              <caret line="121" column="20" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+            <state relative-caret-position="418">
+              <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -119,20 +129,20 @@
         <option value="$PROJECT_DIR$/src/app/Traits/Attachment/Attachment.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/filesAttachment.php" />
-        <option value="$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js" />
         <option value="$PROJECT_DIR$/src/routes/web.php" />
         <option value="$PROJECT_DIR$/config/field.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Field.php" />
         <option value="$PROJECT_DIR$/src/resources/views/fields/lang-nav-tabs.blade.php" />
         <option value="$PROJECT_DIR$/src/resources/views/layouts/field-app.blade.php" />
+        <option value="$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="134" />
-    <option name="width" value="1920" />
-    <option name="height" value="1009" />
+    <option name="y" value="27" />
+    <option name="width" value="960" />
+    <option name="height" value="1013" />
   </component>
   <component name="ProjectId" id="20gpI2s50ljLhDC3PkvDfPyCwye" />
   <component name="ProjectLevelVcsManager">
@@ -143,7 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,6 +187,23 @@
               <item name="sewidan-fields" type="b2602c69:ProjectViewProjectNode" />
               <item name="sewidan-fields" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="ck-editor-5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sewidan-fields" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sewidan-fields" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="ck-editor-5" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sewidan-fields" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sewidan-fields" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -205,6 +231,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -268,19 +295,20 @@
       <workItem from="1642927504320" duration="10394000" />
       <workItem from="1643041095977" duration="1560000" />
       <workItem from="1648558859300" duration="1571000" />
+      <workItem from="1648586738543" duration="875000" />
+      <workItem from="1648633629976" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22125000" />
+    <option name="totallyTimeSpent" value="23008000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="158" width="1920" height="1009" extended-state="6" />
+    <frame x="0" y="27" width="1600" height="829" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18996799" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1949807" />
+      <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -291,12 +319,13 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993565" weight="0.32752612" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993565" weight="0.32599118" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5006435" side_tool="true" weight="0.32842416" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Structure" order="4" visible="true" weight="0.24967825" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,18 +360,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock" />
     <entry file="file://$PROJECT_DIR$/README.md.save">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Field.php">
+    <entry file="file://$PROJECT_DIR$/config/field.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+        <state relative-caret-position="574">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nano.save">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/views/fields/lang-nav-tabs.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -357,43 +387,6 @@
           <caret line="54" column="76" selection-start-line="54" selection-start-column="76" selection-end-line="54" selection-end-column="76" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fieldLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1694">
-          <caret line="121" column="20" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2352">
-            <caret line="168" column="25" selection-start-line="168" selection-start-column="25" selection-end-line="168" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/views/fields/ck-editor-5.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/field.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nano.save">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -413,6 +406,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="16" column="29" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Field.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4284">
+          <caret line="307" column="47" selection-start-line="307" selection-start-column="47" selection-end-line="307" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fieldLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2352">
+            <caret line="168" column="25" selection-start-line="168" selection-start-column="25" selection-end-line="168" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/views/fields/ck-editor-5.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
         </state>
       </provider>
     </entry>

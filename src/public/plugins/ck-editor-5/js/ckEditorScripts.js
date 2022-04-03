@@ -97,7 +97,9 @@ function generateCkEditor5(){
     jQuery('.ckeditor5 , .rtlEditor , .ltrEditor').each(function (index, currentElement) {
 
         ClassicEditor.create(currentElement, {
-
+            toolbar: {
+                shouldNotGroupWhenFull: true
+            },
             licenseKey: '',
             autosave: {
                 save(editor, currentElement) {

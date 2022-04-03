@@ -85,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
+            <state relative-caret-position="100">
+              <caret line="101" column="14" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -141,8 +141,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
-    <option name="width" value="960" />
-    <option name="height" value="1013" />
+    <option name="width" value="1600" />
+    <option name="height" value="829" />
   </component>
   <component name="ProjectId" id="20gpI2s50ljLhDC3PkvDfPyCwye" />
   <component name="ProjectLevelVcsManager">
@@ -296,18 +296,19 @@
       <workItem from="1643041095977" duration="1560000" />
       <workItem from="1648558859300" duration="1571000" />
       <workItem from="1648586738543" duration="875000" />
-      <workItem from="1648633629976" duration="8000" />
+      <workItem from="1648633629976" duration="601000" />
+      <workItem from="1648978388857" duration="138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23008000" />
+    <option name="totallyTimeSpent" value="23739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="829" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1949807" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1975547" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -319,7 +320,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993565" weight="0.32599118" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4993565" visible="true" weight="0.31369662" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5006435" side_tool="true" weight="0.32842416" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -438,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
+        <state relative-caret-position="100">
+          <caret line="101" column="14" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
         </state>
       </provider>
     </entry>

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fe8afa90-8865-42a2-b1d1-13c501bd82c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="101" column="14" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
+            <state relative-caret-position="86">
+              <caret line="100" column="38" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -140,9 +139,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="27" />
-    <option name="width" value="1600" />
-    <option name="height" value="829" />
+    <option name="y" value="158" />
+    <option name="width" value="1200" />
+    <option name="height" value="621" />
   </component>
   <component name="ProjectId" id="20gpI2s50ljLhDC3PkvDfPyCwye" />
   <component name="ProjectLevelVcsManager">
@@ -297,16 +296,15 @@
       <workItem from="1648558859300" duration="1571000" />
       <workItem from="1648586738543" duration="875000" />
       <workItem from="1648633629976" duration="601000" />
-      <workItem from="1648978388857" duration="138000" />
+      <workItem from="1648978388857" duration="815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23739000" />
+    <option name="totallyTimeSpent" value="24416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="829" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1975547" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -439,8 +437,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/public/plugins/ck-editor-5/js/ckEditorScripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="101" column="14" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
+        <state relative-caret-position="86">
+          <caret line="100" column="38" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="38" />
         </state>
       </provider>
     </entry>

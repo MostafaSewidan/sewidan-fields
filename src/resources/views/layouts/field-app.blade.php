@@ -52,7 +52,7 @@
 
                 link.type = "text/css";
                 link.rel = "stylesheet";
-                link.href = 'SewidanField/plugins/bootstrap-fileinput/css/fileinput.min.css';
+                link.href = '/SewidanField/plugins/bootstrap-fileinput/css/fileinput.min.css';
                 head.appendChild(link);
 
                 var scripts = [

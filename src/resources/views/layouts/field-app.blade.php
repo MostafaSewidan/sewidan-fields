@@ -52,11 +52,11 @@
 
                 link.type = "text/css";
                 link.rel = "stylesheet";
-                link.href = '{{asset('SewidanField/plugins/bootstrap-fileinput/css/fileinput.min.css')}}';
+                link.href = 'SewidanField/plugins/bootstrap-fileinput/css/fileinput.min.css';
                 head.appendChild(link);
 
                 var scripts = [
-                    '{{asset('SewidanField/plugins/bootstrap-fileinput/js/fileinput.min.js')}}',
+                    '/SewidanField/plugins/bootstrap-fileinput/js/fileinput.min.js',
                 ];
                 for (var i = 0; i < 1; i++) {
                     var script = document.createElement("script");
